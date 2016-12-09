@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'friendly_id', '~> 5.1.0'
+gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'sprockets-rails'
+#For bootstrap tooltips and popovers depend on tether for positioning
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
