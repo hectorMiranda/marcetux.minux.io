@@ -1,0 +1,8 @@
+<%provide(:page_title, "Edit #{@photo.title}") %>
+<%provide(:photo_active, 'active') %>
+<h1>Editing Picture</h1>
+
+<%= render 'form', photo: @photo %>
+
+<%= link_to 'Show', @photo %> |
+<%= link_to 'Back', photos_path %>

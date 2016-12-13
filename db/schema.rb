@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(version: 20161209025253) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "pictures", force: :cascade do |t|
+  create_table "photos", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.text     "description"
     t.string   "slug"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["slug"], name: "index_pictures_on_slug", unique: true
+    t.index ["slug"], name: "index_photos_on_slug", unique: true
   end
 
 end

@@ -1,4 +1,4 @@
-class Picture < ApplicationRecord
+class Photo < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 

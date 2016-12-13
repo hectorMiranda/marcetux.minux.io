@@ -1,0 +1,26 @@
+<%provide(:page_title, @photo.title) %>
+<%provide(:photo_active, 'active') %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @photo.body %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @photo.slug %>
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>
