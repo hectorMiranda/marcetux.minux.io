@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209025253) do
+ActiveRecord::Schema.define(version: 20161213040806) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -29,8 +29,12 @@ ActiveRecord::Schema.define(version: 20161209025253) do
     t.text     "body"
     t.text     "description"
     t.string   "slug"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_url_original"
+    t.string   "photo_url_large"
+    t.string   "photo_url_medium"
+    t.string   "photo_url_small"
     t.index ["slug"], name: "index_photos_on_slug", unique: true
   end
 
