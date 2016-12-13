@@ -1,0 +1,9 @@
+<%provide(:page_title, @photo.title) %>
+<%provide(:photo_active, 'active') %>
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+    <h1><%= @photo.title %></h1>
+    <p><%= @photo.description.html_safe %></p>
+    <%= @photo.body.html_safe %>
+  </div>
+</div>
