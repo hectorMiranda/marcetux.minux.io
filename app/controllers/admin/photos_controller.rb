@@ -21,7 +21,7 @@ module Admin
 
       respond_to do |format|
         if @photo.save
-          format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+          format.html { redirect_to author_post_path(@photo), notice: 'Photo was successfully created.' }
           format.json { render :show, status: :created, location: @photo }
         else
           format.html { render :new }
@@ -35,7 +35,7 @@ module Admin
     def update
       respond_to do |format|
         if @photo.update(photo_params)
-          format.html { redirect_to @photo, notice: 'Picture was successfully updated.' }
+          format.html { redirect_to author_post_path(@photo), notice: 'Photo was successfully updated.' }
           format.json { render :show, status: :ok, location: @photo }
         else
           format.html { render :edit }
@@ -49,7 +49,7 @@ module Admin
     def destroy
       @photo.destroy
       respond_to do |format|
-        format.html { redirect_to photos_url, notice: 'Picture was successfully destroyed.' }
+        format.html { redirect_to admin_photos_url, notice: 'Picture was successfully destroyed.' }
         format.json { head :no_content }
       end
     end

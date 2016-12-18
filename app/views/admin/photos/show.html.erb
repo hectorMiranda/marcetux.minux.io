@@ -1,5 +1,10 @@
 <%provide(:page_title, @photo.title) %>
 <%provide(:photo_active, 'active') %>
+
+<div>
+  <%= link_to 'Edit', edit_admin_photo_path(@photo), class: 'btn btn-sm btn-warning' %>
+  <%= link_to 'Remove', admin_photo_path(@photo), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+</div>
 <div class="row">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
     <h1><%= @photo.title %></h1>

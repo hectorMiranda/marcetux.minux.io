@@ -1,10 +1,7 @@
-<div class='col-sm-6 col-lg-4'>
-  <div class="card">
-    <div class="card-topper" style='background-image: url(<%= photo.photo_url_original %>);'></div>
-    <div class="card-block">
-      <h4 class="card-title"><%= link_to photo.title, photo%></h4>
-      <p class="card-text"><%= truncate(photo.description, length: 130) %></p>
-      <%= link_to 'See more...', photo, class: 'btn btn-read' %>
-    </div>
-  </div>
-</div>
+<tr>
+  <td><%= link_to photo.title, admin_photo_path(photo)  %></td>
+  <td></td>
+  <td><%= link_to 'Edit', edit_admin_photo_path(photo), class: 'btn btn-sm btn-warning' %></td>
+  <td><%= link_to 'Remove', admin_photo_path(photo), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-sm btn-danger' %></td>
+</tr>
+
