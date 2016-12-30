@@ -1,7 +1,0 @@
-<tr>
-  <td><%= link_to photo.title, admin_photo_path(photo)  %></td>
-  <td></td>
-  <td><%= link_to 'Edit', edit_admin_photo_path(photo), class: 'btn btn-sm btn-warning' %></td>
-  <td><%= link_to 'Remove', admin_photo_path(photo), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-sm btn-danger' %></td>
-</tr>
-

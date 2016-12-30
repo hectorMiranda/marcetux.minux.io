@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'frontend/photos#index'
 
-  namespace :admin do
+  namespace :users do
     resources :photos
       
   end
