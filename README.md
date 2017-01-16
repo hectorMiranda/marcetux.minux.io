@@ -4,6 +4,14 @@ Thank you for checking out Minux.IO. This project will allow you to follow the t
 
 # Getting Started
 
+##Clone this repository
+
+```
+git clone https://github.com/hectorMiranda/minux.io.git
+```
+
+## Set up RVM and create a gemset 
+
 Follow this instructions to set up your initial development environment.
 
 1. Install RVM
@@ -27,7 +35,8 @@ gem install bundler
 ```
 bundle install
 ```
-6. Create database
+
+## Create database
 
 Make sure your current user has the right permissions, if you get an error due to permissions run as a super user:
 ```
