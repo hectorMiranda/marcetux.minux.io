@@ -1,6 +1,7 @@
 <div class="collapse" id="exCollapsingNavbar">
   <div class="collapse-bg p-a-1">
     <div class='card'>
+
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <%= link_to 'Photography', root_path, class: "nav-link #{yield(:picture_active)}" %>
@@ -11,6 +12,15 @@
         <li class="list-group-item">
           <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
         </li>
+
+        <% if user_signed_in? %>
+          <li class="list-group-item">
+            <%= link_to 'Control panel', users_photos_path, class: "nav-link #{yield(:user)}" %>
+          </li>
+          <li class="list-group-item">
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -18,8 +28,8 @@
 
 <nav class="navbar navbar-light bg-faded">
   <div class='container'>
-    <a class='navbar-brand' href='/'>
-      Hector Miranda
+    <a class='logo' href='/'>
+      Marcetux
     </a>
     <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
       &#9776;
@@ -34,6 +44,14 @@
       <li class="nav-item">
         <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
       </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Control panel', users_photos_path, class: "nav-link #{yield(:user)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>

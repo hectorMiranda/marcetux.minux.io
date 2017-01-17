@@ -1,3 +1,46 @@
 <%provide(:about_active, 'active') %>
-<h1> about </h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/15168794_1155209081235793_3021360168144520768_o.jpg?oh=c7438887d831b4f05973be451a679fb0&oe=58DB87BF" alt="Hiking">
+      <div class="carousel-caption">
+        <h3>Hiking</h3>
+        <p>The atmosphere in Vasquez Rocks is lorem ipsum.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/p720x720/10383846_692099530880086_8472679708496009759_o.jpg?oh=85a130d38b5632bebb90acd14f8741f5&oe=5917E465" alt="Seattle">
+      <div class="carousel-caption">
+        <h3>Seattle</h3>
+        <p>Thank you, Seattle - A night we won't forget.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/10001015_600830710006969_5563742422349384122_o.jpg?oh=52f867e2772b5d8e56fc75f0622bc9eb&oe=591E6C68" alt="Los Angeles">
+      <div class="carousel-caption">
+        <h3>LA</h3>
+        <p>Even though the traffic was a mess, we had the best time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

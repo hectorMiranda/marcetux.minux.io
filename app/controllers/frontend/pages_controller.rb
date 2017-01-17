@@ -1,4 +1,4 @@
-module Frontend 
+module Frontend
   class PagesController < FrontendController
     def about
     end
