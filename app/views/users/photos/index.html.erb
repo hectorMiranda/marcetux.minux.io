@@ -1,14 +1,16 @@
 <%provide(:page_title, 'All photos') %>
 <%provide(:photo_active, 'active') %>
 
-<div class="row">
+<div class="container">
   <div>
-  <%= link_to 'New photo', new_users_photo_path, class: 'btn btn-primary btn-sm' %>
+    <%= link_to 'New photo', new_users_photo_path, class: 'btn btn-primary btn-sm' %>
   </div>
-  <table class="table table-stripe">
-    <tr>
-      <th colspan="4">Title</th>
-    </tr>
-    <%= render @photos %>
-  </table>
+  <div>
+    <table class="table">
+      <tr>
+        <th colspan="4">Title</th>
+      </tr>
+      <%= render @photos %>
+    </table>
+  </div>
 </div>

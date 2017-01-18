@@ -1,6 +1,6 @@
 <%provide(:page_title, @photo.title) %>
 <%provide(:photo_active, 'active') %>
-
+<div class="container">
 <div>
   <%= link_to 'Edit', edit_users_photo_path(@photo), class: 'btn btn-sm btn-warning' %>
   <%= link_to 'Remove', users_photo_path(@photo), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
@@ -11,4 +11,5 @@
     <p><%= @photo.description%></p>
     <%= @photo.body.html_safe %>
   </div>
+</div>
 </div>

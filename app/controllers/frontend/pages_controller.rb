@@ -1,11 +1,9 @@
 module Frontend
-  class PagesController < FrontendController
-    def about
+    class PagesController < FrontendController
+        def home; end
+
+        def contact; end
+
+        def engineering; end
     end
-
-    def contact
-    end
-
-
-  end
 end

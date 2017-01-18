@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  color: #aaaaaa;
+  color: $section;
   transition: all ease-in-out 200ms;
 }
 a:hover {
@@ -14,16 +14,18 @@ a:hover {
   text-decoration: none;
 }
 
-
-/*.container {
-    padding: 80px 120px;
-}*/
+img {
+    // -webkit-filter: grayscale(90%);
+    // filter: grayscale(90%); /* make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
 
 
 
 .carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */
+    // -webkit-filter: grayscale(90%);
+    // filter: grayscale(90%); /* make all photos black and white */
     width: 100%; /* Set width to 100% */
     margin: auto;
 }
@@ -286,8 +288,8 @@ label:hover:before {
 }
 /*=== Misc ===*/
 .logo {
-  padding: 15px 0;
+  padding: 0px 0;
   font-size: 25px;
-  color: #aaaaaa;
+  color: $logo;
   font-weight: bold;
 }
