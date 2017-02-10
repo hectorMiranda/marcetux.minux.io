@@ -21,7 +21,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 ```
 2. Install 2.3.1 as the default
 ```
-rmv install 2.3.1
+rvm install 2.3.1
 ```
 3. Create minux gemset and use this 2.3.1 as default
 ```
