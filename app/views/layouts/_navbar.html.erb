@@ -20,8 +20,6 @@
       <li class="nav-item">
         <%= link_to 'Engineering', engineering_path, class: "nav-link #{yield(:engineering_active)}" %>
       </li>
-
-    
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to 'Control panel', users_photos_path, class: "nav-link #{yield(:user)}" %>
@@ -33,7 +31,10 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li> <%= link_to new_user_session_path do%>
+        <span class="glyphicon glyphicon-log-in"></span> Login
+        <%end%>
+        </li>
       </ul>
   </div>
 </nav>
