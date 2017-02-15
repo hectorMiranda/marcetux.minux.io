@@ -4,6 +4,8 @@ module Frontend
 
         def contact; end
 
-        def engineering; end
+        def engineering
+            @photos = Photo.all
+        end
     end
 end
