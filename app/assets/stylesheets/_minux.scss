@@ -1,8 +1,9 @@
 html,
 body {
-  background: #efefef;
+  background: #ffffff;
   padding: 0px;
   font-family: 'Varela Round';
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -19,6 +20,30 @@ img {
     // filter: grayscale(90%); /* make all photos black and white */
     width: 100%; /* Set width to 100% */
     margin: auto;
+}
+
+
+h4 { 
+ border:0 solid #fff; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
 }
 
 

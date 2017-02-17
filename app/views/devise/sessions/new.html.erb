@@ -1,34 +1,33 @@
-<div class="text-center">
-	<div class="logo">Welcome back!</div>
-	<div class="login-form-1">
-		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: 'text-left'}) do |f| %>
-		<div class="login-form-main-message"></div>
-		<div class="main-login-form">
 
-			<div class="login-group">
-				<div class="form-group">
-					<%= f.label :email, :class => 'sr-only', :for => 'user_email' %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>Welcome back.</h4>
 
-					<%= f.email_field :email, autofocus: true, :placeholder => 'email'  %>
-				</div>
-				<div class="form-group">
-					<%= f.label :password, :class => 'sr-only', :for => 'user_password' %><br/>
-					<%= f.password_field :password, autocomplete: "off", :placeholder => 'password'  %>
-				</div>
+			<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: 'text-left'}) do |f| %>
+			<%= f.email_field :email, autofocus: true, class: "form-control input-sm chat-input",:placeholder => 'email'  %>
+            </br>
+			<%= f.password_field :password, autocomplete: "off", class: "form-control input-sm chat-input", :placeholder => 'password'  %>
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">     
+<%= f.submit class: 'btn btn-primary btn-md', value: 'Login' %>
 
-				<% if devise_mapping.rememberable? -%>
+<% if devise_mapping.rememberable? -%>
 				<div class="form-group login-group-checkbox">
 					<%= f.check_box :remember_me %>
 					<%= f.label :remember_me %>
 				</div>
 				<% end -%>
-				<div class="actions">
-					<!-- <i class="fa fa-chevron-right"></i> -->
-					<%= f.submit class: 'login-button', value: '*' %>
-
-				</div>
-				<!-- <%= render "devise/shared/links" %> -->
-			</div>
+				<!--
+				<%= render "devise/shared/links" %>
+-->
+            </span>
+            </div>
+            </div>
 			<% end %>
+        </div>
+    </div>
+</div>
 
-		</div>
