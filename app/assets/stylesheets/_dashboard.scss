@@ -14,9 +14,8 @@
 }
 .admin-panel {
 	width: 100%;
-	// margin: 50px auto;
 }
-/*slidebar侧边栏*/
+
 .slidebar {
 	width: 20%;
 	min-height: 690px;
@@ -51,7 +50,7 @@
 	right: 20px;
 	-webkit-font-smoothing: antialiased;
 }
-/*插入icon图标*/
+
 .slidebar li:nth-child(1):before {content: "\63";}
 .slidebar li:nth-child(2):before {content: "\64";}
 .slidebar li:nth-child(3):before {content: "\62";}
@@ -79,7 +78,6 @@
 	background-color: rgb(255,255,255);
 	box-shadow: 1px 0 0 rgb(255,255,255),inset 5px 0 0 -1px rgb(234,83,63);
 }
-/*main*/
 .main {
 	float: left;
 	width: 79%;
@@ -100,7 +98,6 @@
 }
 .topbar li:first-child {float: left;}
 .topbar a {
-	font-family: 'icomoon';
 	display: block;
 	line-height: 50px;
 	width: 100px;
@@ -116,7 +113,6 @@
 	border: none;
 	border-right: 1px solid rgb(235,235,235);
 }
-/*mainContent*/
 .mainContent h4 {
 	line-height: 1;
 	font-size: 18px;
@@ -132,17 +128,14 @@
 	-ms-transition:opacity 200ms linear;
 	transition:opacity 200ms linear;
 }
-/*通过opacity来切换不同的选项卡*/
 .mainContent>div:target {
 	opacity: 1;
 }
 .mainContent h2 {
 	margin:1em 30px;
-	// color: rgb(234,83,63);
 	font-size: 20px;
 }
 .mainContent h2:before {
-	font-family: 'icomoon';
 	content: attr(data-icon);
 	font-weight: normal;
 	font-variant: normal;
@@ -151,17 +144,7 @@
 	margin-right: 10px;
 	-webkit-font-smoothing: antialiased;
 }
-.mainContent div:nth-child(1) h2:before {content: "\63";}
-.mainContent div:nth-child(2) h2:before {content: "\64";}
-.mainContent div:nth-child(3) h2:before {content: "\62";}
-.mainContent div:nth-child(4) h2:before {content: "\65";}
-.mainContent div:nth-child(5) h2:before {content: "\74";}
-.mainContent div:nth-child(6) h2:before {content: "\66";}
-.mainContent div:nth-child(7) h2:before {content: "\67";}
-.mainContent div:nth-child(8) h2:before {content: "\68";}
-.mainContent div:nth-child(9) h2:before {content: "\69";}
-.mainContent div:nth-child(10) h2:before {content: "\6a";}
-.mainContent div:nth-child(11) h2:before {content: "\75";}
+
 
 #dashboard>div {
 	border: 1px solid rgb(235,235,235);
@@ -231,7 +214,6 @@
 	border: none;
 	text-indent: 10px;
 }
-/*统一各浏览器下placeholder内的字体样式*/
 .quick-press input[type="text"]::-webkit-input-placeholder {font-size: 14px;}
 .quick-press input[type="text"]:-moz-input-placeholder {font-size: 14px;}
 .quick-press input[type="text"]::-moz-input-placeholder {font-size: 14px;}
@@ -285,7 +267,6 @@
 	background: -ms-linear-gradient(top,rgb(220,85,70),rgb(210,65,53));
 	background: linear-gradient(top,rgb(220,85,70),rgb(210,65,53));
 }
-/*logo*/
 .logo a {
 	width: 88px;
 	height: 88px;
@@ -315,7 +296,7 @@
 	background: -ms-linear-gradient(top,rgb(255,255,255),rgb(245,245,245));
 	background: linear-gradient(top,rgb(255,255,255),rgb(245,245,245));
 }
-/*statusbar底部功能按钮*/
+
 .statusbar {
 	position: absolute;
 	bottom: 0;
@@ -340,19 +321,9 @@
 	float: right;
 }
 .statusbar .profiles-setting a, .statusbar .logout a {
-	font-family: 'icomoon';
 	width: 49px;
 	height: 49px;
 	line-height: 50px;
 	border-left: 1px solid rgb(235,235,235);
 }
-// @font-face {
-// 	font-family: 'icomoon';
-// 	src:url('fonts/icomoon.eot');
-// 	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-// 	url('fonts/icomoon.woff') format('woff'),
-// 	url('fonts/icomoon.ttf') format('truetype'),
-// 	url('fonts/icomoon.svg#icomoon') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
+

@@ -137,9 +137,16 @@
     color: inherit;
 }
 
+.timeline-media {
+  padding: 10px;
+  box-shadow: 8px 8px 10px #aaa;
+
+}
+
 .timeline-body > p,
 .timeline-body > ul {
     margin-bottom: 0;
+    margin-top: 20px;
 }
 
     .timeline-body > p + p {
