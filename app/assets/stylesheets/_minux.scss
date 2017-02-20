@@ -73,4 +73,24 @@ h4 {
   padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
+      margin-top: 80px;
+}
+
+
+
+.admin-wrapper {
+    position: absolute;
+    top: 3.6em;
+    left: 0em;
+    width: 14em;
+    height: 100%;
+    background-color: black;
+}
+
+.admin-wrapper ul {
+    width: 12em;
+    list-style: none;
+    margin-top: 2em;
+    margin-left: 1em;
+    padding: 0em;
 }
