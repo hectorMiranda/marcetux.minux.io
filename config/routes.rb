@@ -11,6 +11,6 @@ Rails.application.routes.draw do
         get 'contact' => 'pages#contact', as: :contact
         get 'photos' => 'photos#index', as: :photos
         get 'photos/:id' => 'photos#show', as: :photo
-        get 'engineering' => 'pages#engineering', as: :engineering
+        get 'timeline' => 'pages#timeline', as: :timeline
     end
 end

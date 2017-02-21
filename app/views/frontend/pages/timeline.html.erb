@@ -1,9 +1,7 @@
 <%provide(:engineering_active, 'active') %>
 
-<div class="container">
-    <div class="page-header">
         <h1 id="timeline">Timeline</h1>
-    </div>
+
     <ul class="timeline">
         <% @photos.each_with_index do |photo, i|%>
         <li <%=raw i.odd? ? "class='timeline-inverted'": ""%>>
@@ -36,4 +34,4 @@
         </li>
         <% end %>
     </ul>
-</div>
+

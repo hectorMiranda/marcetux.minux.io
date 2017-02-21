@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: $section;
+  color: #400000;
   transition: all ease-in-out 200ms;
 }
 a:hover {
@@ -105,4 +105,27 @@ h4 {
     margin-top: 2em;
     margin-left: 1em;
     padding: 0em;
+}
+
+i.navbar {
+    border-radius: 0;
+
+    background-color: black;
+    .navbar-brand {
+        font-weight: bolder;
+        .light {
+            font-weight: 300;
+        }
+    }
+    .navbar-toggler {
+        outline: none;
+    }
+}
+
+
+.logo {
+  padding: 0px 0;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
 }

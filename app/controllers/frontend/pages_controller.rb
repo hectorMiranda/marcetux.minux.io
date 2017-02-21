@@ -4,7 +4,7 @@ module Frontend
 
         def contact; end
 
-        def engineering
+        def timeline
             @photos = Photo.all
         end
     end

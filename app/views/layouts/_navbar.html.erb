@@ -18,7 +18,7 @@
         <%= link_to 'Photography', photos_path, class: "nav-link #{yield(:picture_active)}" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Engineering', engineering_path, class: "nav-link #{yield(:engineering_active)}" %>
+        <%= link_to 'Timeline', timeline_path, class: "nav-link #{yield(:timeline_active)}" %>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">
