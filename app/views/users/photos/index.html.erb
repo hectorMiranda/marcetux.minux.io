@@ -1,29 +1,18 @@
 <%provide(:page_title, 'All photos') %>
 <%provide(:photo_active, 'active') %>
 
-<nav class="admin-wrapper">
-<ul>
-<li class="admin-brand">
-<%= link_to 'All my photos', users_photos_path %>
-</li>
-<li class="admin-brand">
-<%= link_to 'New photo', new_users_photo_path, class: '' %></li>
-</ul>
-</nav>
 
+
+
+<%= render 'leftbar' %>
 
 <div id="photos">
-         <div class="container">
-           <div>
-             <%= link_to 'New photo', new_users_photo_path, class: 'btn btn-primary btn-sm' %>
-           </div>
-           <div>
+        
              <table class="table">
                <tr>
                  <th colspan="4">Title</th>
                </tr>
                <%= render @photos %>
              </table>
-           </div>
-         </div>
+           
        </div>
