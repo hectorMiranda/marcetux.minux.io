@@ -85,9 +85,21 @@ h4 {
     width: 14em;
     height: 100%;
     background-color: black;
+    padding-top: 10px;
+    text-decoration: none;
+
+}
+
+
+.admin-wrapper a {
+         color: white;
 }
 
 .admin-wrapper ul {
+    list-style: none;
+}
+
+.admin-brand ul {
     width: 12em;
     list-style: none;
     margin-top: 2em;
