@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  get 'settings/index'
+
+  get 'quotes/index'
+
     devise_for :users
     root to: 'frontend/pages#home'
 
     namespace :users do
         resources :photos
+        resources :quotes
+        resources :settings
     end
 
     scope module: 'frontend' do
