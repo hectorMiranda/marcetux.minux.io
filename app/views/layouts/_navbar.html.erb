@@ -7,9 +7,10 @@
         </a>
       </li>
       <li class="nav-item">
-      <!--    <%= form_tag(photos_path, method: 'get', class: 'navbar-form navbar-right') do %>
-  <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search marcetux'  %>
-<% end %>-->
+        <div class="container-search">
+          <%= search_field_tag 'query', nil, class: 'form-control', placeholder: 'Search marcetux'  %>
+          <button class="icon"><i class="fa fa-search"></i></button>
+        </div>
       </li>
             <li class="nav-item">
               <%= link_to 'Home', home_path, class: "nav-link #{yield(:home_active)}" %>
@@ -24,17 +25,22 @@
         <li class="nav-item">
           <%= link_to 'Control panel', users_photos_path, class: "nav-link #{yield(:user)}" %>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
       <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li> <%= link_to new_user_session_path do%>
-        <span class="glyphicon glyphicon-log-in"></span> Login
+        
+          <% if user_signed_in? %>
+            <li><%= link_to destroy_user_session_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span> Logout
+            <%end%>
+            </li>
+          <% else %>
+            <li><%= link_to new_user_session_path do%>
+            <span class="glyphicon glyphicon-log-in"></span> Login
+            <%end%>
+            </li>
         <%end%>
-        </li>
+        
       </ul>
   </div>
 </nav>
