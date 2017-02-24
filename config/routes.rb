@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'quotes/index'
 
     devise_for :users
-    root to: 'frontend/pages#home'
+    root to: 'frontend/search#index'
 
     namespace :users do
         resources :photos
@@ -13,10 +13,11 @@ Rails.application.routes.draw do
     end
 
     scope module: 'frontend' do
-        get 'home' => 'pages#home', as: :home
+        get 'home' => 'search#index', as: :home
         get 'contact' => 'pages#contact', as: :contact
         get 'photos' => 'photos#index', as: :photos
         get 'photos/:id' => 'photos#show', as: :photo
         get 'timeline' => 'pages#timeline', as: :timeline
+        get 'search' => 'search#index', as: :search
     end
 end
