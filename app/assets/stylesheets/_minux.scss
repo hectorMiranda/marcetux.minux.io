@@ -1,3 +1,7 @@
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+
+
+
 html,
 body {
       //background: #343d46;
@@ -141,6 +145,8 @@ body.navbar-more-show  {
 .navbar .container:not(.navbar-more) {
     padding: 0px;
 }
+
+
 .navbar-more-overlay {
 	background-color: rgba(102, 102, 102, 0.55);
 	display: none;
