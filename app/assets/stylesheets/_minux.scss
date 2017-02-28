@@ -4,7 +4,7 @@
 
 html,
 body {
-      //background: #343d46;
+      background: #343d46;
   padding: 0px;
   font-family: 'Varela Round';
   -webkit-font-smoothing: antialiased;
@@ -190,8 +190,9 @@ body.navbar-more-show  {
 	display: block;
 	font-size: 1.8em;
 }
+
 .navbar-more {
-	background-color: rgb(255, 255, 255);
+	background-color: #343d46;
 	height: calc(100% - 69px);
 	overflow: auto;
 }
@@ -223,6 +224,6 @@ body.navbar-more-show  {
 }
 
 .navbar-header {
-    padding-top: 5px;
+    padding-top: 15px;
 
 }
