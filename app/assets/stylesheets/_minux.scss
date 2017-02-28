@@ -118,10 +118,18 @@ i.navbar {
 .logo {
   padding: 0px 0;
   font-size: 30px;
+    padding-left: 40px;
   color: #fff;
   font-weight: bold;
 }
 
+.logo-xs {
+  padding: 0px 0;
+  padding-left: 0px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
 
 
 
@@ -148,7 +156,7 @@ body.navbar-more-show  {
 
 
 .navbar-more-overlay {
-	background-color: rgba(102, 102, 102, 0.55);
+	background-color: #343d46;
 	display: none;
 	height: 100%;
 	left: 0px;
@@ -224,6 +232,11 @@ body.navbar-more-show  {
 }
 
 .navbar-header {
-    padding-top: 15px;
+    padding-top: 5px;
+
+}
+
+.navbar-header-xs {
+    padding-top: 22px;
 
 }

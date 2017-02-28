@@ -1,8 +1,6 @@
 .box{
-  margin: 100px auto;
-  width: 400px;
-  height: 100px;
-
+  margin: auto auto;
+  width: auto;
 }
 
 
@@ -10,14 +8,14 @@
 
 .container-search{
    overflow: hidden;
-  width: 250px;
+  width: 360px;
   vertical-align: middle;
   white-space: nowrap;
 
 }
 
 .container-search input#query{
- width: 250px;
+ width: 360px;
   height: 50px;
   background: #2b303b;
   border: none;

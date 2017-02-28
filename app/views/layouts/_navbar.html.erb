@@ -1,33 +1,32 @@
-    <div class="navbar-more-overlay"></div>
+   
+	  <div class="navbar-more-overlay"></div>
 	<nav class="navbar navbar-inverse navbar-fixed-top animate">
 		<div class="container navbar-more visible-xs">
+
 		<div class="container-search">
           <%= search_field_tag 'query', nil, class: 'form-control', placeholder: 'Search marcetux'  %>
           <button class="icon"><i class="fa fa-search"></i></button>
-        </div>
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="submit">Submit</button>
-						</span>
-					</div>
-				</div>
-			</form>
+    </div>
+			
 		
 		</div>
 		<div class="container">
+
+      
 			<ul class="nav navbar-nav navbar-left mobile-bar">
-      <li class="nav-item">
-			<div class="navbar-header hidden-sm hidden-md">
+			<li class="nav-item">
+			<div class="navbar-header navbar-left hidden-xs">
 				<a class='logo' href='/'>
           Marcetux
         </a>
-			</div><li><ul>
-       
-
-			<ul class="nav navbar-nav navbar-right mobile-bar">
+			</div>
+					<div class="navbar-header-xs visible-xs">
+				<a class='logo-xs' href='/'>
+          Marcetux
+        </a>
+			</div>
+			
+			<li>
       <li class="nav-item">
         <div class="container-search hidden-xs">
           <%= search_field_tag 'query', nil, class: 'form-control', placeholder: 'Search marcetux'  %>
@@ -35,28 +34,35 @@
         </div>
       </li>
 				<li>
-					<a href="#">
+					<%= link_to timeline_path do %>
 						<span class="menu-icon fa fa-home"></span>
-						Home
-					</a>
+						<span class="hidden-xs">Projects</span>
+						<span class="visible-xs">Projects</span>
+            <%end%>
 				</li>
-				<li>
-					<a href="#">
-						<span class="menu-icon fa fa-info"></span>
-						<span class="hidden-xs">About</span>
-						<span class="visible-xs">About</span>
-					</a>
-				</li>
-				<li class="hidden-xs">
-					<a href="#">
-						<span class="menu-icon fa fa-picture-o"></span>
-						Photos
-					</a>
-				</li>
+				<% if user_signed_in? %>
+					<li>
+					<%= link_to destroy_user_session_path, method: :delete do %>
+						<span class="menu-icon fa fa-sign-out"></span>
+						<span class="hidden-xs">Sign out</span>
+						<span class="visible-xs">Sign out</span>           
+					<%end%>
+					</li>
+				<% else %>
+					<li>
+					<%= link_to new_user_session_path do%>
+						<span class="menu-icon fa fa-sign-in"></span>
+						<span class="hidden-xs">Sign in</span>
+						<span class="visible-xs">Sign in</span>
+					<%end%>
+					</li>
+				<%end%>
+
+		
 				<li class="visible-xs">
 					<a href="#navbar-more-show">
-						<span class="menu-icon fa fa-bars"></span>
-						More
+						<span class="menu-icon fa fa-search"></span>
+						Search
 					</a>
 				</li>
 			</ul>
@@ -98,7 +104,7 @@
     <ul class="nav navbar-nav navbar-right">
         
           <% if user_signed_in? %>
-            <li><%= link_to destroy_user_session_path, method: :delete do %>
+            <li><%= link_to destroy_ucssser_session_path, method: :delete do %>
               <span class="glyphicon glyphicon-log-out"></span> Logout
             <%end%>
             </li>
