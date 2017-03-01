@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161223203602) do
+ActiveRecord::Schema.define(version: 20170301044056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,16 @@ ActiveRecord::Schema.define(version: 20161223203602) do
     t.text     "body"
     t.text     "description"
     t.string   "slug"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "photo_url_original"
     t.string   "photo_url_large"
     t.string   "photo_url_medium"
     t.string   "photo_url_small"
     t.integer  "user_id"
+    t.boolean  "published",          default: false
+    t.datetime "published_at"
+    t.boolean  "private",            default: true
     t.index ["slug"], name: "index_photos_on_slug", unique: true, using: :btree
     t.index ["user_id"], name: "index_photos_on_user_id", using: :btree
   end
