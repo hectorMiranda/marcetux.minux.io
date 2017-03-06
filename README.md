@@ -1,6 +1,6 @@
 # Welcome to Minux.IO
 
-Thank you for checking out Minux.IO. This project will allow you to follow the tutorials and suggest changes or new features.
+Thank you for checking out Minux.IO. 
 
 A live version of this application can be access at www.marcetux.com
 # Getting Started
