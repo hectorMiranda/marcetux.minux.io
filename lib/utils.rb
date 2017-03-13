@@ -90,4 +90,42 @@ def binary_search_rec arr, target, min_index = 0, max_index = arr.length-1
     end
 end
 
+
+
+
+# Bubble sort
+# - Starting at index 0, set index_1 to 0, and index_2 to 1
+# - Compare index_1 and index_2 and swap them if need be
+# - increment index_1 and index_2 and repeat comparision and swapping
+#   until index_2 is the last index in the array
+# - After one swoop, the last item in the array is sorted. Set the
+#   final index to the second last item, and repeat the swapping
+#   process
+# - if there is no swap in an iteration, then the list is sorted
+def bubble_sort arr
+    for i in (0..arr.length-1)
+        index_1 = 0
+        index_2 = 1
+
+        index_final = (arr.length-1)-i
+
+        swapped = false
+
+        while index_2 <= index_final
+            if arr[index_1] > arr[index_2]
+                arr[index_2], arr[index_1] = arr[index_1], arr[index_2]
+                swapped = true
+            end
+
+            index_1 += 1
+            index_2 += 1
+        end
+
+        return arr if !swapped
+    end
+    return arr
 end
+
+end
+
+
