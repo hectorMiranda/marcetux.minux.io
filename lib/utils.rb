@@ -256,3 +256,50 @@ class Queue
     @arr = []
   end
 end
+
+
+
+
+# Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. 
+# It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key') 
+# and explores the neighbor nodes first, before moving to the next level neighbors.
+# * - the splat operator expand an array into a list of arguments
+# http://weblog.raganwald.com/2008/06/what-does-do-when-used-as-unary.html 
+#
+# z = Node.new("d", Node.new("0"))
+# b = Node.new("b", z)
+# c = Node.new("c", Node.new("e"))
+# root = Node.new("A", b, c)
+
+# str = ''
+# root.traverse_depth {|node| str += node.data}
+# print str
+
+# puts
+# str = ''
+# root.traverse_breadth {|node| str += node.data}
+# print str
+
+
+class Node
+  attr_accessor :data, :children
+
+  def initialize(data, *children)
+    @data = data
+    @children = children
+  end
+
+  def traverse_depth(&block)
+    yield self
+    children.each {|child| child.traverse_depth(&block)}
+  end
+
+  def traverse_breadth(&block)
+    queue = [self]
+    while !queue.empty?
+      node = queue.shift
+      yield node
+      queue += node.children
+    end
+  end
+end
