@@ -203,6 +203,18 @@ end
 
 
 
+def quicksort(ary)
+  size = ary.count
+  return ary if size <= 1
+  i, j = 0, size - 1
+  pivot = ary[(size / 2)]
+  while i < j
+    i += 1 while ary[i] < pivot
+    j -= 1 while ary[j] > pivot
+    ary[i], ary[j] = ary[j], ary[i]
+  end
+  quicksort(ary[0..j-1]) + quicksort(ary[j..size-1])
+end
 
 
 
