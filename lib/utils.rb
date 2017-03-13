@@ -126,6 +126,79 @@ def bubble_sort arr
     return arr
 end
 
+
+# Swoop through the array and look for the smallest number
+# Swap the smallest number with the number at index 0
+# Repeat, and swap the second smallest number with the number
+# at index 1
+# Repeat until you have reached the end of the array
+
+def selection_sort arr
+  # var to store the current index
+  current_index = 0
+
+  # loop until the end of the array
+  while current_index < arr.length
+
+    # assume current number is smallest
+    smallest_number_index = current_index
+
+    # loop the array to the right of the number
+    for i in ((current_index + 1)..(arr.length - 1))
+      # keep track of the smallest number so far
+      smallest_number_index = i if arr[i] < arr[smallest_number_index]
+    end
+
+    # swap smallest number with current index
+    arr[current_index], arr[smallest_number_index] = arr[smallest_number_index], arr[current_index]
+
+    # increment current index
+    current_index += 1
+  end
+
+  return arr
 end
 
 
+
+# - if list length is 1, return the list
+# - Split the array into two
+# - sort the left half of the array (recursively)
+# - sort the right half of the array (recursively)
+# - Put them back in the correct order
+def merge_sort arr
+  # base case
+  return arr if arr.length == 1
+
+  # split array and sort the halves
+  midpoint = (arr.length - 1)/2
+  arr_1 = merge_sort(arr[0..midpoint])
+  arr_2 = merge_sort(arr[(midpoint + 1)..(arr.length - 1)])
+
+  # put halves back together in the correct order
+  return merge(arr_1, arr_2)
+end
+
+def merge arr_1, arr_2
+  # arr to hold merged array
+  arr = []
+
+  # repeatedly compare the lowest elements in the
+  # sub arrays and merge them into arr
+  while arr_1[0] && arr_2[0]
+    if arr_1[0] < arr_2[0]
+      arr << arr_1.shift
+    else
+      arr << arr_2.shift
+    end
+  end
+
+  # merge the remaining parts of the arrays if elements
+  # are still present
+  arr.push(arr_1).flatten! if arr_1[0]
+  arr.push(arr_2).flatten! if arr_2[0]
+  
+  return arr
+end
+
+end
