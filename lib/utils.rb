@@ -201,4 +201,46 @@ def merge arr_1, arr_2
   return arr
 end
 
+
+
+
+
+
+end
+
+
+class Queue
+  attr_accessor :arr
+
+  def initialize arr = []
+    @arr = arr
+  end
+
+  def enqueue num
+    @arr << num
+  end
+
+  def dequeue
+    @arr.shift
+  end
+
+  def empty?
+    @arr.empty?
+  end
+
+  def head
+    @arr[0]
+  end
+
+  def tail
+    @arr[-1]
+  end
+
+  def to_s
+    @arr.to_s
+  end
+
+  def clear!
+    @arr = []
+  end
 end
