@@ -7,5 +7,9 @@ module Frontend
         def timeline
             @photos = Photo.all
         end
+
+        def sandbox
+        end
+
     end
 end

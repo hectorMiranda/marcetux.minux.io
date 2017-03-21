@@ -18,6 +18,7 @@ Rails.application.routes.draw do
         get 'photos' => 'photos#index', as: :photos
         get 'photos/:id' => 'photos#show', as: :photo
         get 'timeline' => 'pages#timeline', as: :timeline
+        get 'sandbox' => 'pages#sandbox', as: :sandbox
         get 'search' => 'search#index', as: :search
     end
 end
